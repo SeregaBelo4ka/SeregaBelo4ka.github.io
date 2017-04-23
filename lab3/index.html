@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Latex.Formula</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+		</script>
+		<script type="text/javascript" async
+		  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+		</script>
+		<style>
+		body{
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			background-color: #e6e6fa;
+		}
+		h2{
+			margin-left: 20px;
+		}
+		.itlc{
+			font-style: italic;
+		}
+		h3{
+			font-family: Verdana, sans-serif;
+			font-size: 15px;
+			font-style: italic;
+			margin-left: 40px;
+			color: #6767e0;
+		}
+		.main{
+			/*padding:20px 0 20px 0;*/
+			text-align:center;
+			font-family: Tahoma, sans-serif;
+			font-size: 32px;
+			color: #cc003d;
+		}
+		.aboutme{
+			background-color: #4125cc;
+			text-align: center;
+			font-size: 20px;
+			padding:10px 0 10px 0px;
+			color: white;
+			font-style: italic;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<h1 class="main">Теорія ймовірності. Основні формули</h1>
+			<blockquote>
+				<h2>Основні формули комбінаторики: </h2>
+				<hr>
+					<h3>Число перестановок:</h3>
+					<p>
+						$$P_n = n! = 1\cdot 2 \cdot 3 \cdot  ...  \cdot (n-1) \cdot n$$
+					</p>
+					<h3>Число розміщень:</h3>
+					<p>
+					   $$A_m^n = n \cdot (n-1) \cdot ... \cdot (n-m+1)$$
+					</p>
+					<h3>Число сполучень:</h3>
+					<p>
+						$$C_n^m =\frac{A_n^m}{P_m}=\frac{n!}{m! \cdot (n-m)!}$$
+					</p>
+				<hr>
+				<h2>Формула повної ймовіності:</h2>
+				<hr>
+					<p>
+						$$P(A)=\sum_{k=1}^{n} P(H_k)\cdot P(A|H_k),$$
+						 де $H_1, H_2, ..., H_n$ - повна група гіпотез.</p>
+				<hr>
+				<h2>Формула Байєса:</h2>
+					<p>
+					$$P(H_m|A) =\frac{P(H_m)\cdot P(A|H_m)}{P(A)} = \frac{P(H_m)\cdot P(A|H_m)}{\sum\limits_{k=1}^{n} P(H_k)\cdot P(A|H_k)},$$
+					де $H_1, H_2, ..., H_n$ - повна група гіпотез.
+					</p>
+				<hr>
+				<h2>Формула Бернуллі:</h2>
+					<p>
+					$$P_n(k)=C_n^k \cdot p^k \cdot (1-p)^{n-k} = \frac{n!}{k! \cdot (n-k)!}\cdot p^k \cdot (1-p)^{n-k},$$
+					ймовірність появи події рівно $k$ разів в $n$ незалежних випробуваннях, $p$ - ймовірність появи події при одному випробуванні.
+					</p>
+				<hr>
+				<h2>Наймовірніше число появи події:</h2>
+					<p>
+						Наймовірніше число $k_0$ появи події при $n$ незалежних випробуваннях (де $p$ - ймовірність появи події при одному випробуванні):
+						$$np-(1-p) \le k_0 \le np+p.,$$
+					</p>
+				<hr>
+				<h2>Локальна формула Лапласа:</h2>
+					<p>
+						$$P_n(k) = \frac{1}{\sqrt{npq}} \varphi\left( \frac{k-np}{\sqrt{npq}} \right)$$
+						ймовірність появи події рівно $k$ разів при $n$ незалежних випробуваннях, $p$ - ймовіність появи події при одному випробуванні, $q=1−pq=1−p$. Значення функции $\varphi(x)$ беруться з таблиці.
+					</p>
+				<hr>
+				<h2>Інтегральна формула Лапласа:</h2>
+					<p>
+						$$P_n(m_1, m_2) = \Phi\left( \frac{m_2-np}{\sqrt{npq}} \right)-\Phi\left( \frac{m_1-np}{\sqrt{npq}} \right)$$
+						ймовірність появи події не менше $m_1$ та не більше $m_2$ разів при $n$ незалежних випробуваннях, $p$ - ймовіність появи події при одному випробуванні, $q=1−pq=1−p$. Значення функции $\Phi(x)$ беруться з таблиці.
+					</p>
+				<hr>
+				<h2>Оцінка відхилення відносної частоти від постійної ймовірності $p$:</h2>
+					<p>
+						$$P\left( \left| \frac{m}{n} -p\right| \le \varepsilon\right) = 2  \Phi\left( \varepsilon\cdot \frac{n}{\sqrt{p(1-p)}} \right)$$
+						$ε$ - ймовірність відхилення, $p$ - ймовірність появи події.
+					</p>
+				<h2>Приклади завдань:</h2>
+				<h3>Задача 1.</h3>
+				<p>
+					У дідуся 2 апельсина и 3 банана. Кожний день на протязі 5 днів підряд він видає по одному фрукту.Скількома способами це може бути зроблено?
+				</p>
+				<p><b>Рішення.</b> Маємо набір {а, а, б, б, б}. Всього перестановок пятиэлементної безлічі
+				5!, але ми не повинні враховувати перестановки, в яких об'єкти одного типу змінюються
+				місцями кілька разів, тому потрібно поділити на можливу кількість таких перестановок:
+				$2! · 3!$. В результаті отримуємо</p>
+				<p>$$C_n^m =\frac{A_n^m}{P_m}=\frac{n!}{m! \cdot (n-m)!}=\frac{5!}{3! \cdot (5-3)!}=10$$</p>
+				<p class="itlc">Відповідь: 10.</p>
+
+				<h3>Задача 2.</h3>
+				<p>
+					З $n$ акумуляторів за рік зберігання $k$ виходить з ладу. Навмання вибирають $m$ акумуляторів. Визначити ймовірність того, що серед них $l$ справних. $n=100$,$k=7$,$m=5$,$l=3$.
+				</p>
+				<p><b>Рішення.</b> Маємо схему Бернуллі з параметрами $p=7/100=0,07$ $p=7/100=0,0$7 (ймовірність того, що акумулятор вийде з ладу), $n=5$(число випробувань), $k=5-3=2$ (число «успіхів», несправних акумуляторів). Будемо використовувати формулу Бернуллі (ймовірність того, що в $n$ випробуваннях подія відбудеться $k$ разів).</p>
+				<p>$$P_n(k)=C_n^k \cdot p^k \cdot (1-p)^{n-k}$$</p>
+				<p>Отримуємо:</p>
+				<p>$$P_5(2)=C_5^2 \cdot 0,07^2 \cdot (1-0,07)^{5-2}=\frac{5!}{3!2!}\cdot 0,07^2 \cdot 0,93^{3}=0,0394.$$</p>
+				<p class="itlc">Відповідь: 0,0394.</p>
+			</blockquote>
+		<footer class="aboutme">
+			<p>Виконано студентом групи СОІ-16-1с<br> Бєлкой Сергієм Миколайовичем</p>
+			<p>2017 рік</p>
+		</footer>
+		</div>
+	</body>
+</html>
