@@ -1,0 +1,87 @@
+html {
+  box-sizing: border-box; }
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit; }
+
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background-color: #CCFF99;
+  background-image: url("../texture/argyle/argyle.png");
+}
+.img{
+  position: absolute;
+  top: 20px;
+  left:35%;
+  right: 50px;
+  border: 2px solid white;
+  width:210px;
+  height:270px;
+}
+.content{
+  display: block;
+  position: absolute;
+  top: 320px;
+  margin: 20px 20px;
+  color:white;
+  font-size: 20px;
+}
+.main{
+  width: 60%;
+  margin: 10% auto;
+  background-color: rgba(0,0,0,0.7);
+  position: relative;
+  min-height: 500px;
+  min-width: 500px;
+  border-radius: 10px;
+}
+.menu{
+  display: block;
+  position: absolute;
+  width: 20%;
+  height: 34px;
+  background-color: #990066;
+  margin: 10px 0 10px 0px;
+  text-align: center;
+  padding: 5px 0;
+  font: 600 15px "Open Sans", Arial, sans-serif;
+  border-radius:20px;
+  border: 2px solid white;
+  left:10px;
+}
+.menu-1{
+   top:10px;
+
+}
+.menu-2{
+   top: 54px;
+}
+.lb{
+  position: absolute;
+  top: 200px;
+  left: 50px;
+  color: white;
+  font-size: 25px;
+}
+.mh{
+  position: absolute;
+  top: 140px;
+  left: 20px;
+  color: white;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+.menu :hover {
+  color:black;
+}
+.lb li a:hover{
+  color:red;
+}
+
