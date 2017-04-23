@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mygroup> 
+	 <row>
+	 	<student id="1" fio="Бєлка Сергій Миколайович" bursaries="2037"/>
+	 </row> 
+	  <row>
+	 	<student id="2" fio="Генсіцький Ян Іванович" bursaries="1000"/>
+	 </row> 
+ 	 <row>
+	 	<student id="3" fio="Кривобок Артем Андрійович" bursaries="-"/>
+	 </row> 
+	 <row>
+	 	<student id="4" fio="Нєстулей Наталія Юріївна" bursaries="1400"/>
+	 </row> 
+	  <row>
+	 	<student id="5" fio="Полівара Каріна Едуардівна" bursaries="1400"/>
+	 </row> 
+	  <row>
+	 	<student id="6" fio="Руденко Владислав Сергійович" bursaries="контракт"/>
+	 </row> 
+	  <row>
+	 	<student id="7" fio="Рябошапка Денис Сергійович" bursaries="-"/>
+	 </row> 
+	  <row>
+	 	<student id="8" fio="Скапа Владислав Валентинович" bursaries="1400"/>
+	 </row> 
+</mygroup> 
